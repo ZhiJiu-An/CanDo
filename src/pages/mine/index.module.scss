@@ -1,0 +1,118 @@
+@use '@/styles/variables.scss' as *;
+
+.page {
+  height: 100vh;
+  background: $color-bg-page;
+}
+
+.content {
+  height: 100vh;
+  box-sizing: border-box;
+  padding: 0 $page-padding 60rpx;
+}
+
+.hero {
+  padding: 40rpx 8rpx 24rpx;
+}
+
+.heroTitle {
+  display: block;
+  font-size: 44rpx;
+  font-weight: $font-weight-bold;
+  color: $color-text-primary;
+  margin-bottom: 8rpx;
+}
+
+.heroSub {
+  font-size: $font-size-sm;
+  color: $color-text-tertiary;
+}
+
+.statsCard {
+  display: flex;
+  align-items: center;
+  background: linear-gradient(135deg, $color-primary 0%, $color-primary-light 100%);
+  border-radius: $radius-lg;
+  box-shadow: 0 8rpx 24rpx rgba(255, 107, 53, 0.25);
+  padding: 36rpx 0;
+  margin-bottom: $spacing-md;
+}
+
+.statItem {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.statNum {
+  font-size: 44rpx;
+  font-weight: $font-weight-bold;
+  color: $color-text-white;
+  line-height: 1.2;
+}
+
+.statLabel {
+  margin-top: 8rpx;
+  font-size: $font-size-xs;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.statDivider {
+  width: 2rpx;
+  height: 56rpx;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.menuCard {
+  display: flex;
+  align-items: center;
+  background: $color-bg-card;
+  border-radius: $radius-lg;
+  box-shadow: $shadow-card;
+  padding: 28rpx $spacing-lg;
+  margin-bottom: $spacing-xl;
+
+  &:active {
+    background: $color-bg-hover;
+  }
+}
+
+.menuIcon {
+  font-size: 36rpx;
+  margin-right: $spacing-md;
+}
+
+.menuText {
+  flex: 1;
+  font-size: $font-size-md;
+  color: $color-text-primary;
+}
+
+.menuArrow {
+  font-size: 40rpx;
+  color: $color-text-disabled;
+  line-height: 1;
+}
+
+.sectionHead {
+  margin-bottom: $spacing-md;
+  padding: 0 8rpx;
+}
+
+.sectionTitle {
+  font-size: $font-size-lg;
+  font-weight: $font-weight-semibold;
+  color: $color-text-primary;
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.col {
+  width: calc(50% - #{$spacing-sm} / 2);
+  margin-bottom: $spacing-md;
+}

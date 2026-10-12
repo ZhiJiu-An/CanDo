@@ -1,0 +1,32 @@
+# Windows
+[Dd]esktop.ini
+Thumbs.db
+$RECYCLE.BIN/
+
+# macOS
+.DS_Store
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+
+# Node.js
+node_modules/
+
+# 构建产物（含编译后的云环境 ID 等敏感值）
+dist/
+
+# 微信小程序上传密钥（敏感，禁止入库）
+.auth/
+
+# 本地环境配置（含 appid、云环境 ID）
+.env.local
+.env.*.local
+
+# 微信开发者工具项目配置（含 appid，本地填写）
+project.config.json
+project.private.config.json
+
+# 工具缓存
+.pai/
+.swc/

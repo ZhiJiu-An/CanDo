@@ -1,0 +1,304 @@
+@use '@/styles/variables.scss' as *;
+
+.form {
+  padding: $spacing-md $page-padding 48rpx;
+}
+
+.section {
+  background: $color-bg-card;
+  border-radius: $radius-lg;
+  box-shadow: $shadow-card;
+  padding: $spacing-lg;
+  margin-bottom: $spacing-md;
+}
+
+// 封面图
+.coverBox {
+  width: 100%;
+  height: 360rpx;
+  border-radius: $radius-md;
+  overflow: hidden;
+  background: $color-bg-hover;
+  border: 2rpx dashed $color-border;
+  margin-bottom: $spacing-lg;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.coverImg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.coverPlaceholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.coverIcon {
+  font-size: 64rpx;
+  margin-bottom: 16rpx;
+}
+
+.coverTip {
+  font-size: $font-size-sm;
+  color: $color-text-tertiary;
+}
+
+// 字段
+.field {
+  margin-bottom: $spacing-lg;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.label {
+  display: block;
+  font-size: $font-size-sm;
+  color: $color-text-secondary;
+  margin-bottom: $spacing-sm;
+  font-weight: $font-weight-medium;
+}
+
+.input {
+  width: 100%;
+  height: 80rpx;
+  padding: 0 24rpx;
+  box-sizing: border-box;
+  background: $color-bg-page;
+  border-radius: $radius-sm;
+  font-size: $font-size-md;
+  color: $color-text-primary;
+  line-height: 80rpx;
+}
+
+.textarea {
+  width: 100%;
+  min-height: 120rpx;
+  padding: 20rpx 24rpx;
+  box-sizing: border-box;
+  background: $color-bg-page;
+  border-radius: $radius-sm;
+  font-size: $font-size-md;
+  color: $color-text-primary;
+  line-height: $line-height-normal;
+}
+
+.placeholder {
+  color: $color-text-disabled;
+}
+
+// 分类横向滚动
+.categoryScroll {
+  width: 100%;
+  white-space: nowrap;
+  @include scroll-x-container;
+}
+
+.categoryItem {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 64rpx;
+  padding: 0 28rpx;
+  margin-right: $spacing-sm;
+  border-radius: $radius-round;
+  background: $color-bg-page;
+  border: 2rpx solid transparent;
+  vertical-align: top;
+  transition: all $transition-base;
+
+  &:active {
+    opacity: 0.85;
+  }
+}
+
+.categoryItemActive {
+  background: $color-primary;
+  border-color: $color-primary;
+}
+
+.categoryText {
+  font-size: $font-size-sm;
+  color: $color-text-secondary;
+  white-space: nowrap;
+}
+
+.categoryTextActive {
+  color: $color-text-white;
+}
+
+// 区块标题
+.sectionHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: $spacing-md;
+}
+
+.sectionTitle {
+  font-size: $font-size-md;
+  font-weight: $font-weight-semibold;
+  color: $color-text-primary;
+}
+
+.addAction {
+  font-size: $font-size-sm;
+  color: $color-primary;
+  padding: 4rpx 8rpx;
+
+  &:active {
+    opacity: 0.7;
+  }
+}
+
+// 食材行
+.rowItem {
+  display: flex;
+  align-items: center;
+  margin-bottom: $spacing-sm;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.rowInputName {
+  flex: 1;
+  margin-right: $spacing-sm;
+}
+
+.rowInputAmount {
+  width: 200rpx;
+  margin-right: $spacing-sm;
+}
+
+.rowAction {
+  flex-shrink: 0;
+  font-size: $font-size-sm;
+  color: $color-error;
+  padding: 8rpx 12rpx;
+  white-space: nowrap;
+
+  &:active {
+    opacity: 0.7;
+  }
+}
+
+.rowActionDisabled {
+  color: $color-text-disabled;
+}
+
+.emptyTip {
+  display: block;
+  text-align: center;
+  font-size: $font-size-sm;
+  color: $color-text-tertiary;
+  padding: 32rpx 0;
+}
+
+// 步骤项
+.stepItem {
+  background: $color-bg-page;
+  border-radius: $radius-sm;
+  padding: $spacing-sm $spacing-md;
+  margin-bottom: $spacing-sm;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.stepHead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: $spacing-sm;
+}
+
+.stepNo {
+  width: 44rpx;
+  height: 44rpx;
+  border-radius: $radius-round;
+  background: $color-primary;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.stepNoText {
+  font-size: $font-size-sm;
+  color: $color-text-white;
+  font-weight: $font-weight-semibold;
+}
+
+.stepOps {
+  display: flex;
+  align-items: center;
+}
+
+.stepOp {
+  font-size: $font-size-xs;
+  color: $color-text-secondary;
+  padding: 8rpx 12rpx;
+  margin-left: 8rpx;
+  white-space: nowrap;
+
+  &:active {
+    opacity: 0.7;
+  }
+}
+
+.stepOpDisabled {
+  color: $color-text-disabled;
+}
+
+.stepTextarea {
+  width: 100%;
+  min-height: 96rpx;
+  padding: 16rpx 20rpx;
+  box-sizing: border-box;
+  background: $color-bg-card;
+  border-radius: $radius-sm;
+  font-size: $font-size-sm;
+  color: $color-text-primary;
+  line-height: $line-height-normal;
+}
+
+// 提交按钮
+.submitWrap {
+  width: 100%;
+  padding-top: $spacing-md;
+}
+
+.submitBtn {
+  width: 100%;
+  height: $button-height-lg;
+  background: linear-gradient(135deg, $color-primary 0%, $color-primary-light 100%);
+  border-radius: $radius-button;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all $transition-base;
+
+  &:active {
+    opacity: 0.9;
+    transform: scale(0.99);
+  }
+}
+
+.submitBtnDisabled {
+  opacity: 0.6;
+}
+
+.submitText {
+  font-size: $font-size-lg;
+  font-weight: $font-weight-medium;
+  color: $color-text-white;
+}

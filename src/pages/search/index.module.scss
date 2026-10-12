@@ -1,0 +1,134 @@
+@use '@/styles/variables.scss' as *;
+
+.page {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background: $color-bg-page;
+}
+
+.searchBar {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  padding: 16rpx $page-padding;
+  background: $color-bg-card;
+  border-bottom: 2rpx solid $color-divider;
+}
+
+.inputWrap {
+  flex: 1;
+  height: 72rpx;
+  border-radius: $radius-round;
+  background: $color-bg-page;
+  display: flex;
+  align-items: center;
+  padding: 0 24rpx;
+  box-sizing: border-box;
+}
+
+.searchIcon {
+  font-size: 28rpx;
+  margin-right: 12rpx;
+}
+
+.input {
+  flex: 1;
+  height: 72rpx;
+  font-size: $font-size-sm;
+  color: $color-text-primary;
+}
+
+.placeholder {
+  color: $color-text-tertiary;
+}
+
+.clearIcon {
+  flex-shrink: 0;
+  width: 40rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  text-align: center;
+  font-size: 24rpx;
+  color: $color-text-white;
+  background: $color-text-disabled;
+  border-radius: $radius-round;
+  margin-left: 12rpx;
+}
+
+.cancelText {
+  flex-shrink: 0;
+  margin-left: $spacing-md;
+  font-size: $font-size-md;
+  color: $color-primary;
+  white-space: nowrap;
+
+  &:active {
+    opacity: 0.7;
+  }
+}
+
+.content {
+  flex: 1;
+  height: 0;
+  box-sizing: border-box;
+  padding: $spacing-md $page-padding 60rpx;
+}
+
+.center {
+  width: 100%;
+  padding: 120rpx 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tipText {
+  font-size: $font-size-sm;
+  color: $color-text-tertiary;
+}
+
+.resultWrap {
+  width: 100%;
+}
+
+.resultCount {
+  display: block;
+  font-size: $font-size-sm;
+  color: $color-text-tertiary;
+  margin-bottom: $spacing-md;
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.col {
+  width: calc(50% - #{$spacing-sm} / 2);
+  margin-bottom: $spacing-md;
+}
+
+.hintWrap {
+  padding: 160rpx 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hintIcon {
+  font-size: 96rpx;
+  margin-bottom: 24rpx;
+}
+
+.hintText {
+  font-size: $font-size-md;
+  color: $color-text-secondary;
+  margin-bottom: 12rpx;
+}
+
+.hintSub {
+  font-size: $font-size-sm;
+  color: $color-text-tertiary;
+}

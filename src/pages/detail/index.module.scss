@@ -1,0 +1,326 @@
+@use '@/styles/variables.scss' as *;
+
+.page {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background: $color-bg-page;
+}
+
+.centerWrap {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 $page-padding;
+}
+
+.tipIcon {
+  font-size: 96rpx;
+  margin-bottom: 24rpx;
+}
+
+.tipText {
+  font-size: $font-size-sm;
+  color: $color-text-tertiary;
+}
+
+// 内容区
+.content {
+  flex: 1;
+  height: 0;
+  box-sizing: border-box;
+  padding-bottom: 160rpx;
+}
+
+.coverWrap {
+  width: 100%;
+  height: 480rpx;
+  background: $color-bg-hover;
+}
+
+.cover {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+// 封面悬浮操作（置顶 / 收藏）
+.floatOps {
+  position: absolute;
+  right: 24rpx;
+  bottom: 24rpx;
+  display: flex;
+  align-items: center;
+}
+
+.floatBtn {
+  width: 72rpx;
+  height: 72rpx;
+  border-radius: $radius-round;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: $spacing-sm;
+  transition: all $transition-base;
+
+  &:active {
+    transform: scale(0.92);
+  }
+}
+
+.floatBtnActive {
+  background: linear-gradient(135deg, $color-primary 0%, $color-accent 100%);
+}
+
+.floatBtnFav {
+  background: #ff4d4f;
+}
+
+.floatIcon {
+  font-size: 36rpx;
+  color: $color-text-white;
+  line-height: 1;
+}
+
+.infoSection {
+  padding: $spacing-lg $page-padding $spacing-md;
+}
+
+.infoHead {
+  display: flex;
+  align-items: center;
+  margin-bottom: $spacing-sm;
+}
+
+.name {
+  flex: 1;
+  font-size: $font-size-xxl;
+  font-weight: $font-weight-bold;
+  color: $color-text-primary;
+  line-height: $line-height-tight;
+  @include text-ellipsis;
+}
+
+.tag {
+  flex-shrink: 0;
+  margin-left: $spacing-sm;
+  padding: 4rpx 20rpx;
+  border-radius: $radius-round;
+  background: $color-tag-bg;
+}
+
+.tagText {
+  font-size: $font-size-xs;
+  color: $color-tag-text;
+}
+
+.intro {
+  font-size: $font-size-sm;
+  color: $color-text-secondary;
+  line-height: $line-height-loose;
+}
+
+// 通用区块
+.section {
+  margin: 0 $page-padding $spacing-md;
+  padding: $spacing-lg;
+  background: $color-bg-card;
+  border-radius: $radius-lg;
+  box-shadow: $shadow-card;
+}
+
+.sectionTitle {
+  display: block;
+  font-size: $font-size-lg;
+  font-weight: $font-weight-semibold;
+  color: $color-text-primary;
+  margin-bottom: $spacing-md;
+}
+
+.emptyTip {
+  display: block;
+  font-size: $font-size-sm;
+  color: $color-text-tertiary;
+  padding: 16rpx 0;
+}
+
+// 标签
+.tagList {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.tagChip {
+  display: inline-flex;
+  align-items: center;
+  padding: 8rpx 18rpx;
+  margin: 0 $spacing-sm $spacing-sm 0;
+  border-radius: $radius-round;
+  background: $color-tag-bg;
+}
+
+.tagChipText {
+  font-size: $font-size-sm;
+  color: $color-tag-text;
+  white-space: nowrap;
+}
+
+.tagChipClose {
+  margin-left: 10rpx;
+  font-size: 20rpx;
+  color: $color-tag-text;
+  opacity: 0.6;
+  line-height: 1;
+
+  &:active {
+    opacity: 1;
+  }
+}
+
+.tagAdd {
+  display: inline-flex;
+  align-items: center;
+  padding: 8rpx 18rpx;
+  margin-bottom: $spacing-sm;
+  border-radius: $radius-round;
+  border: 2rpx dashed $color-border;
+  background: transparent;
+
+  &:active {
+    background: $color-bg-hover;
+  }
+}
+
+.tagAddText {
+  font-size: $font-size-sm;
+  color: $color-text-tertiary;
+  white-space: nowrap;
+}
+
+// 食材
+.ingredientList {
+  display: flex;
+  flex-direction: column;
+}
+
+.ingredientRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20rpx 0;
+  border-bottom: 2rpx solid $color-divider;
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.ingredientName {
+  flex: 1;
+  font-size: $font-size-md;
+  color: $color-text-primary;
+  @include text-ellipsis;
+}
+
+.ingredientAmount {
+  flex-shrink: 0;
+  margin-left: $spacing-md;
+  font-size: $font-size-sm;
+  color: $color-text-secondary;
+  white-space: nowrap;
+}
+
+// 步骤
+.stepList {
+  display: flex;
+  flex-direction: column;
+}
+
+.stepItem {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: $spacing-md;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.stepNo {
+  flex-shrink: 0;
+  width: 48rpx;
+  height: 48rpx;
+  border-radius: $radius-round;
+  background: linear-gradient(135deg, $color-primary 0%, $color-primary-light 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: $spacing-sm;
+  margin-top: 4rpx;
+}
+
+.stepNoText {
+  font-size: $font-size-sm;
+  color: $color-text-white;
+  font-weight: $font-weight-semibold;
+}
+
+.stepText {
+  flex: 1;
+  font-size: $font-size-md;
+  color: $color-text-primary;
+  line-height: $line-height-loose;
+}
+
+// 底部操作栏
+.actionBar {
+  flex-shrink: 0;
+  display: flex;
+  padding: $spacing-sm $page-padding;
+  padding-bottom: calc(#{$spacing-sm} + env(safe-area-inset-bottom));
+  background: $color-bg-card;
+  box-shadow: $shadow-float;
+  border-top: 2rpx solid $color-divider;
+}
+
+.btn {
+  flex: 1;
+  height: $button-height-md;
+  border-radius: $radius-button;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all $transition-base;
+
+  &:active {
+    opacity: 0.85;
+    transform: scale(0.98);
+  }
+}
+
+.btnEdit {
+  margin-right: $spacing-sm;
+  background: $color-tag-bg;
+}
+
+.btnEditText {
+  font-size: $font-size-md;
+  font-weight: $font-weight-medium;
+  color: $color-primary;
+  white-space: nowrap;
+}
+
+.btnDelete {
+  background: linear-gradient(135deg, $color-error 0%, #ff7a7a 100%);
+}
+
+.btnDeleteText {
+  font-size: $font-size-md;
+  font-weight: $font-weight-medium;
+  color: $color-text-white;
+  white-space: nowrap;
+}

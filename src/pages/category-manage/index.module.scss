@@ -1,0 +1,117 @@
+@use '@/styles/variables.scss' as *;
+
+.page {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background: $color-bg-page;
+}
+
+.content {
+  flex: 1;
+  height: 0;
+  box-sizing: border-box;
+  padding: $spacing-md $page-padding 160rpx;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  background: $color-bg-card;
+  border-radius: $radius-md;
+  box-shadow: $shadow-card;
+  padding: 28rpx $spacing-lg;
+  margin-bottom: $spacing-sm;
+}
+
+.itemInfo {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  min-width: 0;
+}
+
+.itemName {
+  font-size: $font-size-md;
+  font-weight: $font-weight-medium;
+  color: $color-text-primary;
+  @include text-ellipsis;
+}
+
+.systemBadge {
+  flex-shrink: 0;
+  margin-left: $spacing-sm;
+  padding: 2rpx 12rpx;
+  border-radius: $radius-xs;
+  background: $color-bg-hover;
+}
+
+.systemBadgeText {
+  font-size: $font-size-xs;
+  color: $color-text-tertiary;
+}
+
+.itemCount {
+  flex-shrink: 0;
+  margin: 0 $spacing-md;
+  font-size: $font-size-sm;
+  color: $color-text-tertiary;
+  white-space: nowrap;
+}
+
+.itemOps {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+}
+
+.opText {
+  font-size: $font-size-sm;
+  color: $color-text-secondary;
+  padding: 8rpx 16rpx;
+  white-space: nowrap;
+
+  &:active {
+    opacity: 0.7;
+  }
+}
+
+.opDanger {
+  color: $color-error;
+}
+
+.footer {
+  flex-shrink: 0;
+  padding: $spacing-sm $page-padding;
+  padding-bottom: calc(#{$spacing-md} + env(safe-area-inset-bottom));
+  background: $color-bg-card;
+  box-shadow: $shadow-float;
+}
+
+.addBtn {
+  width: 100%;
+  height: $button-height-md;
+  border-radius: $radius-button;
+  background: linear-gradient(135deg, $color-primary 0%, $color-primary-light 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all $transition-base;
+
+  &:active {
+    opacity: 0.9;
+    transform: scale(0.99);
+  }
+}
+
+.addBtnText {
+  font-size: $font-size-md;
+  font-weight: $font-weight-medium;
+  color: $color-text-white;
+  white-space: nowrap;
+}

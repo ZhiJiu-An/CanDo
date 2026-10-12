@@ -1,0 +1,106 @@
+@use '@/styles/variables.scss' as *;
+
+.mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.55);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal {
+  width: 580rpx;
+  background: $color-bg-card;
+  border-radius: $radius-lg;
+  padding: 36rpx 32rpx 0;
+  box-sizing: border-box;
+  box-shadow: $shadow-popup;
+}
+
+.title {
+  display: block;
+  text-align: center;
+  font-size: $font-size-lg;
+  font-weight: $font-weight-semibold;
+  color: $color-text-primary;
+  margin-bottom: 28rpx;
+}
+
+.inputWrap {
+  width: 100%;
+  height: 80rpx;
+  border-radius: $radius-sm;
+  background: $color-bg-page;
+  border: 2rpx solid $color-border;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+  margin-bottom: 32rpx;
+}
+
+.input {
+  width: 100%;
+  height: 76rpx;
+  font-size: $font-size-md;
+  color: $color-text-primary;
+}
+
+.placeholder {
+  color: $color-text-tertiary;
+}
+
+.footer {
+  display: flex;
+  border-top: 2rpx solid $color-divider;
+  margin: 0 -32rpx;
+}
+
+.cancelBtn {
+  flex: 1;
+  height: 96rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-right: 2rpx solid $color-divider;
+
+  &:active {
+    background: $color-bg-hover;
+  }
+}
+
+.cancelText {
+  font-size: $font-size-md;
+  color: $color-text-secondary;
+}
+
+.confirmBtn {
+  flex: 1;
+  height: 96rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:active {
+    background: $color-bg-hover;
+  }
+}
+
+.confirmBtnDisabled {
+  &:active {
+    background: transparent;
+  }
+}
+
+.confirmText {
+  font-size: $font-size-md;
+  color: $color-primary;
+  font-weight: $font-weight-medium;
+}
+
+.confirmTextDisabled {
+  color: $color-text-disabled;
+}

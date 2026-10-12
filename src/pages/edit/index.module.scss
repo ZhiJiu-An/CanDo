@@ -1,0 +1,26 @@
+@use '@/styles/variables.scss' as *;
+
+.page {
+  min-height: 100vh;
+  background: $color-bg-page;
+  padding-bottom: calc(48rpx + env(safe-area-inset-bottom));
+}
+
+.centerWrap {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 $page-padding;
+}
+
+.tipIcon {
+  font-size: 96rpx;
+  margin-bottom: 24rpx;
+}
+
+.tipText {
+  font-size: $font-size-sm;
+  color: $color-text-tertiary;
+}
